@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "ea47bd48-0a60-4352-9980-19ab81729508",
+		"name": "World Clock API",
+		"description": "REST Services that will return current date/time in JSON for only registered time zone.\n\nList of time zones: https://www.timeanddate.com/time/zones/",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Coordinated Universal Time",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/json/utc/now",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"json",
+						"utc",
+						"now"
+					]
+				},
+				"description": "Request in which it´s possible to check the Coordinated Universal Time, which is the reference time zone from which all other time zones in the world are calculated.\n\nHow to use: After selecting the Environment World Clock API_Prod, click on SEND."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Current Time (within a Timezone)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/json/est/now",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"json",
+						"est",
+						"now"
+					]
+				},
+				"description": "Request in which it´s possible to check a single registered time zone. Below is a list of the possible time zones:\n\nAST, AZOST, AZST, CAST, CET, CST, ChST, EEST, EGST, EST, GMT, GST, IRST, KOST, MAGST, MST, NST, NZST, PST, SAST, TOST, UTC and WEST.\n\nHow to use: A After selecting the Environment World Clock API_Prod, in the url replace the text after \"json\" to desired time zone and click on SEND."
+			},
+			"response": []
+		},
+		{
+			"name": "JSONP - Get Current Time (within a Timezone)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/jsonp/cet/now?callback=mycallback",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"jsonp",
+						"cet",
+						"now"
+					],
+					"query": [
+						{
+							"key": "callback",
+							"value": "mycallback"
+						}
+					]
+				},
+				"description": "Request in which it´s possible to check a single registered time zone, however, returning a JSON-P (JSON with Padding). JSONP is an JavaScript technique for requesting data by loading a script element.\n\nBelow is a list of the possible time zones:\n\nAST, AZOST, AZST, CAST, CET, CST, ChST, EEST, EGST, EST, GMT, GST, IRST, KOST, MAGST, MST, NST, NZST, PST, SAST, TOST, UTC and WEST.\n\nHow to use: A After selecting the Environment World Clock API_Prod, in the url replace the text after \"jsonp\\\" to desired time zone and click on SEND."
+			},
+			"response": []
+		}
+	]
+}
