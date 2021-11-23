@@ -1,5 +1,6 @@
 package com.analu.challenge2;
 
+//Model class that keep the information
 public class Information {
 
     private String name;

@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+//Controller Class responsible to render the HTML page
 @Controller
 public class HomeController {
 
