@@ -49,7 +49,7 @@ public class HomeView extends VerticalLayout {
 
        Div container = new Div();
        container.setMinWidth("50%");
-       container.add(new H2("Time Zone result"));
+           container.add(new H2("Time Zone result"));
        add(form, container);
 
        H2 result = new H2();
